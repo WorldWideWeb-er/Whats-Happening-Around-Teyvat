@@ -1,0 +1,37 @@
+@use "../utility" as u;
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.header {
+		height: 15vh;
+		display: flex;
+		align-items: flex-end;
+		&__filter {
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			column-gap: u.rem(20);
+			margin-bottom: u.rem(30);
+		}
+	}
+	.tableGrid {
+		&__header,
+		&__info {
+			display: grid;
+			grid-template-columns: auto auto 100px;
+			column-gap: 25px;
+		}
+		&__header {
+			p {
+				font-size: u.rem(20);
+				font-weight: 600;
+			}
+			p:last-of-type {
+				grid-column: 2 / span 1;
+				text-align: center;
+			}
+		}
+		&__info {
+		}
+	}
+}
