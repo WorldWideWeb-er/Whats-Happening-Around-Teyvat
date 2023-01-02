@@ -20,19 +20,28 @@
     </header>
     <div class="tableGrid">
         <div class="tableGrid__header">
-            <p>Weapon Ascension Name</p>
-            <p>Weapon Ascension Days</p>
+            <p>Image</p>
+            <p>Name</p>
+            <p>Days</p>
         </div>
         <div class="tableGrid__info">
             <?php
             foreach ($wepAscList as $wepAsc) {
             ?>
-                <p> <?php echo $wepAsc['wepAscName'] ?></p>
-                <p> <?php echo $wepAsc['wepAscDayOne'] ?> & <?php echo $wepAsc['wepAscDayTwo'] ?> </td>
-                <p>
-                    <a href="faq_view.php?faqId=<?php echo $faqSingle['faqId'] ?>"><button type="button" class="btn btn-outline-info">View</button></a>
-                </p>
+                <div class="wepAsc">
+                    <img src="./inc/wepAsc_img/<?php echo $wepAsc['imgName'] ?>.webp" alt="<?php echo $wepAsc['imgName'] ?> Img">
+                    <p> <?php echo $wepAsc['wepAscName'] ?></p>
+                    <p> <?php echo $wepAsc['wepAscDayOne'] ?> & <?php echo $wepAsc['wepAscDayTwo'] ?></p>
+                    <div class="wepAsc__Edit">
+                        <a href="faq_view.php?faqId=<?php echo $faqSingle['faqId'] ?>">
+                            <p>Edit</p>
+                        </a>
+                    </div>
+
+                </div>
             <?php } ?>
+
+
         </div>
     </div>
 </body>

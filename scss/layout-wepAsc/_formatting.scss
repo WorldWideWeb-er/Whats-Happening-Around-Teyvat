@@ -16,22 +16,50 @@ body {
 	}
 	.tableGrid {
 		&__header,
-		&__info {
+		&__info .wepAsc {
 			display: grid;
-			grid-template-columns: auto auto 100px;
+			grid-template-columns: 100px 300px auto 100px;
 			column-gap: 25px;
 		}
 		&__header {
+			border-bottom: 3px solid var(--black);
 			p {
 				font-size: u.rem(20);
 				font-weight: 600;
+				text-align: center;
 			}
 			p:last-of-type {
-				grid-column: 2 / span 1;
+				grid-column: 3 / span 1;
 				text-align: center;
 			}
 		}
 		&__info {
+			.wepAsc {
+				align-self: center;
+				padding: 0 u.rem(20);
+				img {
+					align-self: center;
+					height: 50px;
+				}
+
+				p {
+					align-self: center;
+					margin: u.rem(10) 0;
+				}
+				&__Edit {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: u.rem(5) u.rem(10);
+					p {
+						font-weight: 600;
+						color: var(--black);
+					}
+				}
+			}
+			.wepAsc:nth-child(even) {
+				background-color: var(--white);
+			}
 		}
 	}
 }
