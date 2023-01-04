@@ -1,0 +1,49 @@
+@use "../utility" as u;
+body {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	.header {
+		height: auto;
+		width: 50vw;
+		display: flex;
+		flex-direction: column;
+		margin-top: u.rem(30);
+		// background-color: var(--white);
+		&__type {
+			display: flex;
+			justify-content: space-around;
+			a {
+				width: 100%;
+				padding: u.rem(10) 0;
+				font-weight: 600;
+				border-radius: u.rem(10) u.rem(10) 0 0;
+				text-align: center;
+				background-color: var(--lGray);
+				color: var(--white);
+			}
+			a:hover {
+				color: var(--blue);
+			}
+			.inactive {
+				background-color: var(--gray);
+			}
+		}
+		&__filter {
+			width: 100%;
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+
+			a {
+				width: 100%;
+				padding: u.rem(10) 0;
+				font-weight: 600;
+				border-radius: u.rem(10) u.rem(10) 0 0;
+				text-align: center;
+				background-color: var(--gray);
+				color: var(--white);
+			}
+		}
+	}
+}

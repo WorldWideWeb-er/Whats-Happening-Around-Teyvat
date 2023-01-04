@@ -11,6 +11,10 @@
 
 <body>
     <header class="header">
+        <div class="header__type">
+            <a class="header__type" href="material_List.php">Weapon Ascension Materials</a>
+            <a class="header__type inactive" href="character_List.php">Character Talent Materials</a>
+        </div>
         <div class="header__filter" method="GET">
             <a href="<?php echo $_SERVER['SCRIPT_NAME']; ?>">All</a>
             <a href="<?php echo $_SERVER['SCRIPT_NAME']; ?>?filterColumn=wepAscDayOne&filterDay=Monday">Monday & Thursday</a>

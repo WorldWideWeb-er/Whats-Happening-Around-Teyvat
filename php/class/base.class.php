@@ -2,6 +2,7 @@
 class base
 {
     var $tableName = "";
+    var $tableColumns = "";
     var $dataArray = array();
     var $errors = array();
     var $db = null;
@@ -54,6 +55,22 @@ class base
         } else {
             $stmt->execute(array());
         }
+
+        if ($stmt->rowCount() > 0) {
+            $dataList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return $dataList;
+    }
+
+    function getListDaily()
+    {
+        $dataList = array();
+        $day = date("l");
+
+        $sql = "SELECT * FROM " . $this->tableName . " WHERE :day IN " . $this->tableColumns;
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':day', $day);
+        $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
             $dataList = $stmt->fetchAll(PDO::FETCH_ASSOC);

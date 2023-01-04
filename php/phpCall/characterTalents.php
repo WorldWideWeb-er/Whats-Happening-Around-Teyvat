@@ -1,9 +1,9 @@
 <?php
-require_once('./php/class/mat.class.php');
+require_once('./php/class/char.class.php');
 
-$wepAsc = new wepAsc();
-//Get Wep Info
-$wepAscList = $wepAsc->getWepListFiltered(
+$charMat = new charTal();
+//Get Character Info
+$charTalList = $charMat->getcharListFiltered(
     (isset($_GET['filterColumn']) ? $_GET['filterColumn'] : null),
     (isset($_GET['filterDay']) ? $_GET['filterDay'] : null)
 );

@@ -1,0 +1,107 @@
+@use "../utility" as u;
+.tableGrid {
+	&__header,
+	&__wep .wepAsc {
+		display: grid;
+		grid-template-columns: 75px 300px 200px 100px;
+		column-gap: 25px;
+	}
+	&__header {
+		border-bottom: 3px solid var(--black);
+		p {
+			margin: u.rem(10) 0;
+			font-size: u.rem(25);
+			font-weight: 600;
+			text-align: center;
+		}
+		p:last-of-type {
+			grid-column: 3 / span 1;
+			text-align: center;
+		}
+	}
+	&__wep {
+		.wepAsc {
+			align-self: center;
+			padding: 0 u.rem(20);
+			img {
+				align-self: center;
+				height: 50px;
+			}
+
+			p {
+				align-self: center;
+				margin: u.rem(10) 0;
+				font-size: u.rem(18);
+			}
+			&__Edit {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: u.rem(5) u.rem(10);
+				p {
+					font-weight: 600;
+					color: var(--black);
+				}
+			}
+		}
+		.wepAsc:nth-child(even) {
+			background-color: var(--white);
+		}
+	}
+	&__char {
+		.matInfo {
+			display: grid;
+			grid-template-columns: 75px 150px 600px 200px 100px;
+			column-gap: 10px;
+			padding: 0 u.rem(20);
+			align-self: center;
+			padding: u.rem(5) u.rem(20);
+			img {
+				align-self: center;
+				height: 50px;
+			}
+			p {
+				align-self: center;
+
+				font-size: u.rem(18);
+			}
+			&__Char {
+				display: grid;
+				justify-content: center;
+				align-items: center;
+				grid-template-columns: repeat(auto-fill, 110px);
+				column-gap: u.rem(5);
+				row-gap: u.rem(5);
+				&__Indiv {
+					min-height: 110px;
+					min-width: 110px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					margin: 0;
+					border: 3px solid var(--black);
+					border-radius: u.rem(10);
+					background-color: white;
+					p {
+						text-align: center;
+						margin: u.rem(5) 0;
+					}
+				}
+			}
+			&__Edit {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: u.rem(5) u.rem(10);
+				p {
+					font-weight: 600;
+					color: var(--black);
+				}
+			}
+		}
+		.matInfo:nth-child(even) {
+			background-color: var(--white);
+		}
+	}
+}

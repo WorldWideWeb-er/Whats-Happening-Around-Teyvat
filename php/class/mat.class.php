@@ -4,6 +4,7 @@ require_once(__DIR__ . "/base.class.php");
 class wepAsc extends base
 {
     var $tableName = "wepinfo";
+    var $tableColumns = "(wepAscDayOne,wepAscDayTwo,wepAscSunday)";
 
     function getWepListFiltered($searchColumn = null, $searchDay = null)
     {
