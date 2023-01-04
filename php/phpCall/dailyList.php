@@ -12,4 +12,4 @@ $matDailyList = $wepAsc->getListDaily();
 $charMat = new charTal();
 $charDailyList = $charMat->getListDaily();
 
-// var_dump($charDailyList);
+// var_dump($charDailyList); 
