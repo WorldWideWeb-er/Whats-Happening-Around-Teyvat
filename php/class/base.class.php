@@ -9,11 +9,17 @@ class base
 
     function __construct()
     {
-        //connect to Database
+        //connect to Database - Local
+        // $this->db = new PDO(
+        //     'mysql:host=localhost;dbname=;charset=utf8',
+        //     'GenshinAdmin',
+        //     'gMusWNYUowwU2R[9'
+        // );
         $this->db = new PDO(
-            'mysql:host=localhost;dbname=genshin_info;charset=utf8',
-            'GenshinAdmin',
-            'gMusWNYUowwU2R[9'
+            'mysql:host=localhost;
+            dbname=nate9weber_genshin_info;charset=utf8',
+            'nate9weber_genshin_info',
+            'VmSCw131h#'
         );
         // var_dump($this->db);
     }

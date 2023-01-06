@@ -23,7 +23,6 @@
 				align-self: center;
 				height: 50px;
 				width: 53px;
-				border-right: 3px solid var(--lGray);
 			}
 			p {
 				align-self: center;
@@ -48,14 +47,13 @@
 	&__char {
 		.matInfo {
 			display: grid;
-			grid-template-columns: 75px 500px;
+			grid-template-columns: 75px 250px;
 			column-gap: 5px;
 			align-self: center;
 			padding: u.rem(5) u.rem(20);
 			img {
 				align-self: center;
 				height: 50px;
-				border-right: 3px solid var(--lGray);
 			}
 			&__Char {
 				display: grid;
