@@ -10,18 +10,18 @@ class base
     function __construct()
     {
         //connect to Database - Local
-        // $this->db = new PDO(
-        //     'mysql:host=localhost;dbname=;charset=utf8',
-        //     'GenshinAdmin',
-        //     'gMusWNYUowwU2R[9'
-        // );
         $this->db = new PDO(
-            'mysql:host=localhost;
-            dbname=nate9weber_genshin_info;charset=utf8',
-            'nate9weber_genshin_info',
-            'VmSCw131h#'
+            'mysql:host=localhost;dbname=genshin_info;charset=utf8',
+            'GenshinAdmin',
+            'gMusWNYUowwU2R[9'
         );
         // var_dump($this->db);
+        // $this->db = new PDO(
+        //     'mysql:host=localhost;
+        //     dbname=nate9weber_genshin_info;charset=utf8',
+        //     'nate9weber_genshin_info',
+        //     'VmSCw131h#'
+        // );
     }
 
     function set($dataArray)

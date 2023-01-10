@@ -5,6 +5,7 @@ class wepAsc extends base
 {
     var $tableName = "wepinfo";
     var $tableColumns = "(wepAscDayOne,wepAscDayTwo,wepAscSunday)";
+    var $curlURL = "http://localhost/WHAT/daily-wep";
 
     function getWepListFiltered($searchColumn = null, $searchDay = null)
     {
